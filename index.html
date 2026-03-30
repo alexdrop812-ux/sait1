@@ -45,6 +45,15 @@ nav a {color:#fff;margin:0 10px;text-decoration:none;font-size:14px;}
 footer {background:#020617;padding:30px;text-align:center;font-size:14px;color:#aaa;}
 
 img {width:100%;border-radius:10px;}
+  .faq-answer {
+display:none;
+margin-top:10px;
+color:#ccc;
+}
+
+.faq-item h4 {
+cursor:pointer;
+}
 </style>
 </head>
 
@@ -55,7 +64,7 @@ img {width:100%;border-radius:10px;}
 <nav>
 
 <div class="logo">
-<img src="https://via.placeholder.com/40" alt="logo">
+<img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="logo">
 <span>NextPlay</span>
 </div>
 
@@ -189,18 +198,18 @@ Our goal is to deliver a fast, secure and user-friendly environment accessible w
 <h2>FAQ</h2>
 
 <div class="faq-item">
-<h4>Is NextPlay free to use?</h4>
-<p>Yes, users can access the platform without upfront cost.</p>
+<h4 onclick="toggleFAQ(this)">Is NextPlay free to use?</h4>
+<p class="faq-answer">Yes, users can access the platform without any upfront cost.</p>
 </div>
 
 <div class="faq-item">
-<h4>Is it mobile friendly?</h4>
-<p>Yes, the platform works on all modern devices.</p>
+<h4 onclick="toggleFAQ(this)">Is it mobile friendly?</h4>
+<p class="faq-answer">Yes, the platform is fully optimized for smartphones, tablets and desktop devices.</p>
 </div>
 
 <div class="faq-item">
-<h4>Is user data secure?</h4>
-<p>We apply modern security protocols to ensure data safety.</p>
+<h4 onclick="toggleFAQ(this)">Is user data secure?</h4>
+<p class="faq-answer">We use modern encryption and security protocols to ensure full data protection.</p>
 </div>
 
 </div>
@@ -227,6 +236,17 @@ This website is provided for informational purposes only. Availability of servic
 Users must comply with local regulations before using online platforms.
 </p>
 </footer>
+  
+<script>
+function toggleFAQ(element) {
+let answer = element.nextElementSibling;
 
+if (answer.style.display === "block") {
+    answer.style.display = "none";
+} else {
+    answer.style.display = "block";
+}
+}
+</script>
 </body>
 </html>
